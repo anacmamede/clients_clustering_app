@@ -5,15 +5,15 @@ import numpy as np
 
 class ClusterClients(object):
     def __init__(self):
-        self.home_path = '../'        
-        self.gross_revenue_scaler = pickle.load(open(self.home_path + 'src/features/gross_revenue_scaler.pkl', 'rb'))
-        self.recency_days_scaler  = pickle.load(open(self.home_path + 'src/features/recency_days_scaler.pkl', 'rb'))
-        self.qtde_products_scaler = pickle.load(open(self.home_path + 'src/features/qtde_products_scaler.pkl', 'rb'))
-        self.frequency_scaler     = pickle.load(open(self.home_path + 'src/features/frequency_scaler.pkl', 'rb'))
-        self.qtde_returns_scaler  = pickle.load(open(self.home_path + 'src/features/qtde_returns_scaler.pkl', 'rb'))
-        self.rf_model = pickle.load(open(self.home_path +'src/models/rf_model.pkl', 'rb' ) )
-        self.reducer  = pickle.load(open(self.home_path +'src/features/umap_reducer.pkl', 'rb' ) )
-        self.kmeans   = pickle.load(open(self.home_path +'src/models/kmeans_model.pkl', 'rb' ) )
+        self.home_path = ''        
+        self.gross_revenue_scaler = pickle.load(open(self.home_path + 'features/gross_revenue_scaler.pkl', 'rb'))
+        self.recency_days_scaler  = pickle.load(open(self.home_path + 'features/recency_days_scaler.pkl', 'rb'))
+        self.qtde_products_scaler = pickle.load(open(self.home_path + 'features/qtde_products_scaler.pkl', 'rb'))
+        self.frequency_scaler     = pickle.load(open(self.home_path + 'features/frequency_scaler.pkl', 'rb'))
+        self.qtde_returns_scaler  = pickle.load(open(self.home_path + 'features/qtde_returns_scaler.pkl', 'rb'))
+        self.rf_model = pickle.load(open(self.home_path +'models/rf_model.pkl', 'rb' ) )
+        self.reducer  = pickle.load(open(self.home_path +'features/umap_reducer.pkl', 'rb' ) )
+        self.kmeans   = pickle.load(open(self.home_path +'models/kmeans_model.pkl', 'rb' ) )
 
     def data_cleaning(self, df_raw):
         df_raw = df_raw.drop('Unnamed: 8', axis =1)
