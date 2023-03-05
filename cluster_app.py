@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 def load_data(file_path):
-    return pd.read_csv(file_path)
+    return pd.read_csv(file_path, encoding='iso-8859-1')
 
 def cluster_rename(df):
     cluster_map = {7:'Principe', 5:'Duque', 1:'Marques', 2:'Conde', 4:'Visconde', 3:'Barao', 6:'Burgues', 0:'Plebeu'}
@@ -74,9 +74,7 @@ selected = option_menu( menu_title=None,
 pipeline = ClusterClients()
 
 if selected=='Visualização':
-    # st.markdown('## Acompanhamento Programa Príncipes')
-    # file_path = 'data/df_cluster.csv'
-    file_path = r"C:\Users\User\repos\pa_005\cluster_app\data\df_cluster.csv"
+    file_path = 'data/df_cluster.csv'
     df9 = load_data(file_path)
     df9 = cluster_rename(df9)
     df_cluster = pipeline.cluster_profile(df9)
