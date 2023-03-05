@@ -5,7 +5,7 @@ import numpy as np
 
 class ClusterClients(object):
     def __init__(self):
-        self.home_path = ''        
+        self.home_path = '../'        
         self.gross_revenue_scaler = pickle.load(open(self.home_path + 'src/features/gross_revenue_scaler.pkl', 'rb'))
         self.recency_days_scaler  = pickle.load(open(self.home_path + 'src/features/recency_days_scaler.pkl', 'rb'))
         self.qtde_products_scaler = pickle.load(open(self.home_path + 'src/features/qtde_products_scaler.pkl', 'rb'))
