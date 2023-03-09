@@ -123,14 +123,18 @@ Com os clusters formados os seguintes insights foram gerados:
 ![median_gross](imgs/median_gross.png)
 
 # 6. Deploy do modelo
-Para deploy do modelo foi utilizado a biblioteca Streamlit para criar uma página web, nela pode-se visualizar os dados dos cl
-
+Para deploy do modelo foi utilizado a biblioteca Streamlit para criar uma página web, nela pode-se visualizar os dados dos classificação atual dos clientes e, em uma segunda página, inserir novos clientes através do upload do csv do banco de dados do e-commerce.
 ![app1](imgs/streamlit_app_pg1.jpg)
 ![app2](imgs/streamlit_app_pg2.jpg)
+
 # 7. Conclusões
+O principal objetivo desse projeto foi alcançado, a base de dados de clientes do e-commerce foi agrupada em 8 grupos de clientes com características diferentes, como pode ser observado na análise exploratória de dados dos clientes clusterizados. Os times de marketing e negócio consegue gerar insights e estratégias para a fidelização desses clientes. Além disso, esses times conseguem classificar novos clientes inserindo uma nova planilha de dados na página web. 
 
 # 8. Próximos passos
+- Criar novas features para melhorar o modelo e trazer novos insights.
+- Obter mais dados sobre os clientes.
+- Criar novas variáveis na etapa de Feature Engineering, melhorando o modelo final.
+- Automatizar o processo de treinamento do modelo de machine learning da clusterização, para que o modelo seja atualizado após um intervalo de tempo, atualizando a classificação e a quantidade de clientes nos clusters.
 
-# LICENSE
 
-# All Rights Reserved - Comunidade DS 2021
+
