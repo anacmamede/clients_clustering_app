@@ -108,6 +108,8 @@ if selected=='Visualização':
             st.markdown('### Cluster Profile')
             st.dataframe(df_cluster[['cluster_name', 'perc_customer', 'gross_revenue',
             'recency_days', 'qtde_products', 'frequency', 'qtde_returns']], use_container_width=True)# width=800)
+
+st.download_button('Download csv clusterização de clientes', data=convert_df(df9), file_name='ClusterizaçaoClientes.csv', mime='text/csv')
        
 
 

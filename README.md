@@ -57,33 +57,43 @@ O produto final será uma lista com os clientes agrupados e um relatório com as
 
 ## Processo
 **Entendendo o problema de negócio**
+
 Entender a necessidade de agrupamento dos clientes para auxiliar a tomada de decisão das próximas etapas.
 
 **Coleta e limpeza dos dados**
+
 Coleta dos dados e limpeza dos dados, como renomear colunas, verificar tipos de dados, verificar a existência de NA e decidir o que fazer com eles. Filtragem das variáveis após a análise inicial.
 
 **Feature Engineering**
+
 Criação de features que descrevem corretamente o fenômeno, para utilização como parâmetros de entrada no treinamento dos modelos de machine learning.
 
 **Análise Exploratória dos Dados (EDA)**
+
 Exploração dos dados disponíveis para adquirir conhecimento do negócio e do problema a ser resolvido, analisar valores inconsistesntes, comportamento dos dados e outliers.
 
 **Preparação dos dados e Estudo de Espaço**
+
 Uso de técnicas de redimensionamento dos dados para uso nas etapas de estudo do espaço e treinamento dos modelos de machine learning. Para o estudo do espaço, foram utilizados os seguintes métodos para a redução de dimensionalidade: PCA (Principal Component Analysis), UMAP (Uniform Manifold Approximation and Projection), t-SNE (t-Distributed Stochastic Neighbor Embedding) e Tree-Based Embedding.
 
 **Feature Selection**
+
 Seleção de variáveis que serão utilizados no treinamento dos modelos.
 
 **Machine Learning Modelling**
+
 Utilização de técnicas de machine learning para treinamento de modelos de clusterização. Os algoritmos K-Means Clustering, GMM (Gaussian Mixture Models) Clustering e Hierarchical Clustering foram treinados com diferentes números de cluster e a métrica avaliada foi a _Silhouette Score_. 
 
 **Final Machine Learning Modelling**
+
 Baseado na performance do modelo, escolheu-se o modelo final e a quantidade de clusters. 
 
 **Análise Exploratória dos Clusters**
+
 Análise Exploratória do agrupamento de clientes resultante do modelo final, e utilização dos dados para responder as perguntas do time de marketing.
 
 **Deploy do Modelo**
+
 - Relatório com os resultados obtidos
 - Modelo em produção para a classificação de novos clientes
 - Aplicação web para visualização dos dados dos clientes clusterizados e classificação de novos clientes.
@@ -100,20 +110,23 @@ Análise Exploratória do agrupamento de clientes resultante do modelo final, e 
 # 4. Resultados de negócio
 Com os clusters formados os seguintes insights foram gerados:
 
-**O faturamento dos clientes do cluster Príncipe corresponde a 55.98% do total**
-![](cluster_app\imgs\gross_cluster.png)
-**True/False.**
+**O faturamento dos clientes do cluster Príncipe corresponde a 55.98% do total.**
+![gross_cluster](imgs/gross_cluster.png)
 
-**Hypothesis 02:**
+**Os clientes do cluster Príncipe possuem um volume de produtos de 57.56% do total.**
+![qtde_products](imgs/qtde_products.png)
 
-**True/False.**
+**Os clientes do cluster Príncipe possuem média de devolução acima da média geral.**
+![returns](imgs/returns.png)
 
-**Hypothesis 03:**
-
-**True/False.**
+**A mediana dos clientes do cluster Príncipe é 2826.31 enquanto a mediana da base é 613.20, ou seja 4.61x maior.**
+![median_gross](imgs/median_gross.png)
 
 # 6. Deploy do modelo
+Para deploy do modelo foi utilizado a biblioteca Streamlit para criar uma página web, nela pode-se visualizar os dados dos cl
 
+![app1](imgs/streamlit_app_pg1.jpg)
+![app2](imgs/streamlit_app_pg2.jpg)
 # 7. Conclusões
 
 # 8. Próximos passos
